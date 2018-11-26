@@ -2,8 +2,8 @@ public class Parnik extends Teplitsa{
     //public String name = "parnichek";
     //public parnik1 = new Teplitsa (dlina: 10, shirina: 4, vysota: 2, name: "B");
 
-    public String gryadka1 = "Kartoha";
-    public String gryadka2 = "Pomidor";
+    private String gryadka1 = "Kartoha";
+    private String gryadka2 = "Pomidor";
 
     public Parnik(int dlina, int shirina, int vysota, String name) {
         super(dlina, shirina, vysota, name);

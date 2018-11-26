@@ -1,8 +1,8 @@
 public class Tsvetnik extends Teplitsa {
     /* public tsvetnic1 = new Teplitsa (dlina: 4, shirina: 3, vysota: 2, name: "A"); */
     //public String name = "tsvetnichek";
-    public String gryadka1 = "tulps";
-    public String gryadka2 = "roses";
+    private String gryadka1 = "tulps";
+    private String gryadka2 = "roses";
 
     public Tsvetnik(int dlina, int shirina, int vysota, String name) {
         super(dlina, shirina, vysota, name);
