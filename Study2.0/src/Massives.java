@@ -1,6 +1,7 @@
 public class Massives {
 
     public static void main(String[] args) {
+        // Задача 8.8
         int [] mas1 = new int[12];
 
         for (int i = 0; i < mas1.length; i++){
