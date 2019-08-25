@@ -69,19 +69,6 @@ public class Chapter1 {
     else {
         System.out.println("Число не целое");
     }*/
-// Задача 7.12 - расчёт кол-ва счастливых билетов
-        int s1 = 0;
-        int s2 = 0;
-        for (int i = 1000;i<=999999;i++){
-            for (int stepen=3;stepen<=5; stepen++){
-                s1 = s1 + (i/(int)Math.pow(10,stepen));
-            };
-            for (int stepen=0;stepen<=2; stepen++){
-                s2 = s2 + (i/(int)Math.pow(10,stepen));
-            }
-
-    }
-
 
     }
 }
