@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Massives {
 
     public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class Massives {
         System.out.println("Индекс максимального элемента = "+ind);
 */
 // Задача 8.2.5: варианты для проверки таблицы умножения
-        int [] P = new int[15];
+/*        int [] P = new int[15];
         boolean needRandom = true;
         int a = 0;
         int b = 0;
@@ -50,7 +52,34 @@ public class Massives {
                 }
             }
             System.out.println("Пример"+(i+1)+": "+a+" * "+b);
-        }
+        }*/
+// Задача 8.2.4 создать двумерный массив 6х7, отсортировать каждую строку, чтобы макс элемент был вначале
+        int temp = 0;
+        System.out.println("Исходный массив:");
+        int [][] m = new int[6][7];
+            for (int i=0;i<6;i++){
+                for (int j=0;j<7;j++){
+                    m[i][j] = randomizeInt();
+                    System.out.print(m[i][j]+" ");
+                }
+                System.out.println(" ");
+            }
+            for (int i=0;i<6;i++){
+                for (int j=6;j>0; j--){
+                    if (m[i][j]>m[i][j-1]){
+                        temp = m[i][j-1];
+                        m[i][j-1] = m[i][j];
+                        m[i][j] = temp;
+                    }
+                }
+            }
+        System.out.println("Отсортированный массив: ");
+            for (int i=0;i<6;i++){
+                for (int j=0;j<7;j++){
+                    System.out.print(m[i][j]+" ");
+                }
+            System.out.println(" ");
+            }
     }
 
     public static int randomizeInt (){
@@ -58,4 +87,3 @@ public class Massives {
         return ((int)(Math.random()*8+2));
     }
 }
-// test comment
