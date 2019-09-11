@@ -54,7 +54,7 @@ public class Massives {
             System.out.println("Пример"+(i+1)+": "+a+" * "+b);
         }*/
 // Задача 8.2.4 создать двумерный массив 6х7, отсортировать каждую строку, чтобы макс элемент был вначале
-        int temp = 0;
+/*        int temp = 0;
         System.out.println("Исходный массив:");
         int [][] m = new int[6][7];
             for (int i=0;i<6;i++){
@@ -79,11 +79,35 @@ public class Massives {
                     System.out.print(m[i][j]+" ");
                 }
             System.out.println(" ");
+            }*/
+// Задача 8.2.3: двумерный массив, зарандомить -5 5, вывести индекс строки с наибольшим по модулю произведением элементов.
+        int multiply = 1;
+        int max = 1;
+        int maxInd = 10;
+        System.out.println("Исходный массив:");
+        int [][] m = new int[7][4];
+            for (int i=0;i<7;i++){
+                for (int j=0;j<4;j++){
+                    m[i][j] = randomizeInt();
+                    System.out.print(m[i][j]+" ");
+                }
+                System.out.println(" ");
             }
+            for (int i=0;i<7;i++){
+                for (int j=0;j<4; j++){
+                    multiply = multiply*Math.abs(m[i][j]);
+                }
+                if (multiply > max){
+                    max = multiply;
+                    multiply = 1;
+                    maxInd = i;
+                }
+                else multiply = 1;
+            }
+        System.out.println("Индекс строки с max произведением = "+ maxInd);
     }
 
     public static int randomizeInt (){
- //       int x = (int)(Math.random()*8+2);
-        return ((int)(Math.random()*8+2));
+         return ((int)(Math.random()*11-5));
     }
 }
