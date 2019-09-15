@@ -82,7 +82,7 @@ public class Massives {
             }*/
 // Задача 8.2.3: двумерный массив, зарандомить -5 5, вывести индекс строки с наибольшим по модулю произведением элементов.
 
-        int multiply = 1;
+/*        int multiply = 1;
         int max = 1;
         int maxInd = 10;
         System.out.println("Исходный массив:");
@@ -105,10 +105,55 @@ public class Massives {
                 }
                 else multiply = 1;
             }
-        System.out.println("Индекс строки с max произведением = "+ maxInd);
+        System.out.println("Индекс строки с max произведением = "+ maxInd);*/
+
+// 9.1.1 - метод рандомайза [a,b]. Заполнить массив.
+/*        int[] mas = new int[20];
+        for (int i = 0; i < mas.length; i++) {
+            mas[i] = randomizeIntAB(-2,7);
+            System.out.print(mas[i]+" ");
+        }*/
+// 9.1.2 - создать массив и вывести на экран через свои методы
+/*    int[] mas1 = new int[10];
+        for (int i = 0; i < mas1.length; i++) {
+            mas1[i] = randomizeIntAB(-5,5);
+        }
+        printArr(mas1);*/
+
     }
 
     public static int randomizeInt (){
-         return ((int)(Math.random()*11-5));
+         return ((int)(Math.random()*11)-5);
     }
+
+    //метод рандомайза элемента из отрезка [a,b]
+    public static int randomizeIntAB (int a, int b){
+        return ((int)(Math.random()*(b-a+1))+a);
+    }
+
+    // методы выводит входящий массив в строку
+    public static void printArr (int arr[]){
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
+    }
+
+    // метод сортирует входящий массив. задача 9.1.3
+    public static void sortArrayPuz (int inputArr[]){
+        for (int i=inputArr.length-1;i>1;i--){
+            boolean sorted = true;
+            for (int j=0;j<i; j++){
+                if (inputArr[j]>inputArr[j+1]){
+                    int temp = inputArr[j];
+                    inputArr[j] = inputArr[j+1];
+                    inputArr[j+1] = temp;
+                    sorted = false;
+                }
+            }
+            if (sorted){
+                break;
+            }
+        }
+    }
+
 }
