@@ -120,6 +120,11 @@ public class Massives {
         }
         printArr(mas1);*/
 
+// 9.1.4 - массив из 7ми строк. Отсортировать и вывести по возрастанию заглавной буквы
+        String[] masStr = {"Лермонтов М.Ю.","Есенин","Акунин Б.","Толстой Л.Н.","Толстой А.Н.","Пушкин А.С","Достоевский "};
+        sortArrayPuz(masStr);
+        printArr(masStr);
+
     }
 
     public static int randomizeInt (){
@@ -138,6 +143,14 @@ public class Massives {
         }
     }
 
+    // распечатывает массив строк в столбик
+    public static void printArr (String arr[]){
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]+" ");
+        }
+    }
+
+
     // метод сортирует входящий массив. задача 9.1.3
     public static void sortArrayPuz (int inputArr[]){
         for (int i=inputArr.length-1;i>1;i--){
@@ -145,6 +158,22 @@ public class Massives {
             for (int j=0;j<i; j++){
                 if (inputArr[j]>inputArr[j+1]){
                     int temp = inputArr[j];
+                    inputArr[j] = inputArr[j+1];
+                    inputArr[j+1] = temp;
+                    sorted = false;
+                }
+            }
+            if (sorted){
+                break;
+            }
+        }
+    }
+    public static void sortArrayPuz (String inputArr[]){
+        for (int i=inputArr.length-1;i>1;i--){
+            boolean sorted = true;
+            for (int j=0;j<i; j++){
+                if (inputArr[j].compareTo(inputArr[j+1])>0){
+                    String temp = inputArr[j];
                     inputArr[j] = inputArr[j+1];
                     inputArr[j+1] = temp;
                     sorted = false;
