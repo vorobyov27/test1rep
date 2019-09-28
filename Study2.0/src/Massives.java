@@ -121,10 +121,20 @@ public class Massives {
         printArr(mas1);*/
 
 // 9.1.4 - массив из 7ми строк. Отсортировать и вывести по возрастанию заглавной буквы
-        String[] masStr = {"Лермонтов М.Ю.","Есенин","Акунин Б.","Толстой Л.Н.","Толстой А.Н.","Пушкин А.С","Достоевский "};
+/*        String[] masStr = {"Лермонтов М.Ю.","Есенин","Акунин Б.","Толстой Л.Н.","Толстой А.Н.","Пушкин А.С","Достоевский "};
         sortArrayPuz(masStr);
-        printArr(masStr);
+        printArr(masStr);*/
 
+// 10.1.3 создание окружности с вводимыми координатами
+    Circle cr1 = new Circle();
+        System.out.println("Координата центра: ("+cr1.x+","+cr1.y+")"+"; Радиус: "+cr1.r);
+/*        System.out.println("Длина окружности = "+ cr1.dlinaOkr(cr1.r));
+        cr1.moveCenter(cr1);
+        System.out.println("Рандомно сдвигаем центр в ("+cr1.x+","+cr1.y+")");*/
+    Circle cr2 = new Circle();
+        System.out.println("Координата центра: ("+cr2.x+","+cr2.y+")"+"; Радиус: "+cr2.r);
+        System.out.println("Расстояние между центрами окружностей: "+cr1.distanceCircle(cr1,cr2));
+    cr1.isOnePoint(cr1,cr2);
     }
 
     public static int randomizeInt (){
